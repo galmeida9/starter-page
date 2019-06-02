@@ -11,25 +11,31 @@ function handleQuery(a, b) {
             document.getElementsByClassName("search-txt")[0].value = b.substr(3);
             var site = "https://www.reddit.com/search/?q=";
             site += document.getElementsByClassName("search-txt")[0].value;
-            window.open(site);
+            window.open(site,"_self");
         }
         else if (b[0] == "!" && b[1] == "y") {
             document.getElementsByClassName("search-txt")[0].value = b.substr(3);
             var site = "https://www.youtube.com/results?search_query=";
             site += document.getElementsByClassName("search-txt")[0].value;
-            window.open(site);
+            window.open(site,"_self");
         }
         else if (b[0] == "!" && b[1] == "t") {
             document.getElementsByClassName("search-txt")[0].value = b.substr(3);
             var site = "https://twitter.com/search?q=";
             site += document.getElementsByClassName("search-txt")[0].value;
-            window.open(site);
+            window.open(site,"_self");
         }
         else if (b[0] == "!" && b[1] == "m") {
             document.getElementsByClassName("search-txt")[0].value = b.substr(3);
             var site = "http://rarbg.to/torrents.php?search=";
             site += document.getElementsByClassName("search-txt")[0].value;
-            window.open(site);
+            window.open(site,"_self");
+        }
+        else if (b[0] == "!" && b[1] == "f") {
+            document.getElementsByClassName("search-txt")[0].value = b.substr(3);
+            var site = "https://www.facebook.com/search/top/?q=";
+            site += document.getElementsByClassName("search-txt")[0].value;
+            window.open(site,"_self");
         }
         else document.forms["searchform"].submit(); 
     }
