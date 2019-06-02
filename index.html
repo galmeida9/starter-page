@@ -18,6 +18,16 @@ body {
     bottom: 0;
 }
 
+#weatherCity, #weatherTemp, #weatherCondition, #date, #hour, #minutes {
+    position: absolute;
+    color: white;
+}
+
+#weatherImg {
+    position: absolute;
+    margin-top: 90pt;
+}
+
 </style>
 
 </head>
@@ -28,4 +38,21 @@ body {
         <source src="resources/Sword-Art-Online-HD-Live-Wallpaper.mp4" type="video/mp4">
     </video>
 
+    <div class="time">
+        <p id="date"></p>
+        <p id="hour" style="margin-top: 40pt;"></p>
+    </div>
+
+    <div id="weather">
+        <p id="weatherCity" style="margin-top: 90pt;"></p>
+        <p id="weatherTemp" style="margin-top: 110pt;"></p>
+        <p id="weatherCondition" style="margin-top: 130pt;"></p>
+        <img id="weatherImg" style="margin-top: 150pt;">
+    </div>
+
 </body>
+
+<script src="weather.js"></script>
+<script src="clock.js"></script>
+
+</html>
