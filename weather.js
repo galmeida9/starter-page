@@ -19,9 +19,14 @@ function weather(position){
         var data = JSON.parse(this.response);
         console.log(data);
         if (request.status >= 200 && request.status < 400) {
+            var condition = data["list"]["0"]["weather"]["0"]["main"];
+
+            if (condition == "Clouds") condition = "曇り"
+            else if (condition == "Clear") condition = "晴れ" 
+
             document.getElementById("weatherCity").innerHTML = "シティ: " + data["city"]["name"] + ", " + data["city"]["country"];
             document.getElementById("weatherTemp").innerHTML = "天気: " + Math.ceil(data["list"]["0"]["main"]["temp"]) + "°C";
-            document.getElementById("weatherCondition").innerHTML = data["list"]["0"]["weather"]["0"]["main"];
+            document.getElementById("weatherCondition").innerHTML = condition;
             document.getElementById("weatherImg").src = "https://openweathermap.org/img/w/" + data["list"]["0"]["weather"]["0"]["icon"] + ".png";
         } 
         else {console.log('error')}
