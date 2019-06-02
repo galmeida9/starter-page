@@ -12,6 +12,7 @@ function handleQuery(a, b) {
             site += document.getElementsByClassName("search-txt")[0].value;
             window.open(site);
         }
+        else document.forms["searchform"].submit(); 
     }
            
 }

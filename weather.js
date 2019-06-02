@@ -45,8 +45,8 @@ function weather(position){
     request.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?lat='+position.coords.latitude+
     '&lon='+position.coords.longitude+'&APPID=43781a0c36823440a1bc53550259e697&units=metric', true);
 
-    document.cookie = "lat=" + position.coords.latitude + "expires=365";
-    document.cookie = "lat=" + position.coords.longitude + "expires=365";
+    document.cookie = "lat=" + position.coords.latitude + ";expires=365";
+    document.cookie = "lat=" + position.coords.longitude + ";expires=365";
 
     request.onload = function () {
         var data = JSON.parse(this.response);
