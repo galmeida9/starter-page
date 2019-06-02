@@ -3,11 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Start Page</title>
+<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
 
 <style>
 
 body {
     overflow: hidden;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
 #videoBackground {
@@ -15,12 +19,17 @@ body {
     min-width: 100%;
     position: fixed;
     right: 0;
+    left: 0;
+    top: 0;
     bottom: 0;
 }
 
 #weatherCity, #weatherTemp, #weatherCondition, #date, #hour, #minutes {
     position: absolute;
     color: white;
+    display: inline-block;
+    left: 0;
+    right: 0;
 }
 
 #weatherImg {
@@ -38,16 +47,16 @@ body {
         <source src="resources/Sword-Art-Online-HD-Live-Wallpaper.mp4" type="video/mp4">
     </video>
 
-    <div class="time">
-        <p id="date"></p>
-        <p id="hour" style="margin-top: 40pt;"></p>
+    <div class="time" style="text-align: center; width: 100%;">
+        <p id="hour" style="font-size: 50pt;"></p>
+        <p id="date" style="margin-top: 130pt; font-size: 18pt;"></p>
     </div>
 
-    <div id="weather">
-        <p id="weatherCity" style="margin-top: 90pt;"></p>
-        <p id="weatherTemp" style="margin-top: 110pt;"></p>
-        <p id="weatherCondition" style="margin-top: 130pt;"></p>
-        <img id="weatherImg" style="margin-top: 150pt;">
+    <div id="weather" style="text-align: center; width: 100%;">
+        <p id="weatherCity" style="margin-top: 190pt;"></p>
+        <p id="weatherTemp" style="margin-top: 210pt;"></p>
+        <p id="weatherCondition" style="margin-top: 230pt;"></p>
+        <img id="weatherImg" style="margin-top: 250pt;  margin-left: -22pt;">
     </div>
 
 </body>
