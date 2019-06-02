@@ -116,7 +116,7 @@ body {
     <form action="https://www.google.com/search" id="searchform" class="searchform" method="get" name="searchform" target="_blank">
         <div class="search-box" style="margin-top: -100pt;">
             <input type="text" name="q" class="search-txt" onkeydown="javascript:handleQuery(event,this.value);return event.key != 'Enter';" placeholder="Type to search" autocomplete="off"/>
-            <a class="search-btn" href="#">
+            <a class="search-btn" onclick="searchPress(event)">
             <i class="fas fa-search"></i>
             </a>
         </div>
