@@ -10,7 +10,6 @@
 <style>
 
 body {
-    overflow: hidden;
     font-family: 'Sawarabi Gothic', sans-serif;
     width: 100%;
     height: 100%;
@@ -93,6 +92,29 @@ body {
  font-weight: bold;
 }
 
+.websites {
+    position: absolute;
+    border-width: 5pt;
+    border-color: rgb(255,255,255, 0.5);
+    border-style: solid;
+    border-radius: 21pt;
+    height: 160pt;
+    background-color: rgb(211,211,211, 0.5);
+}
+
+.title {
+    position: absolute;
+    color: white;  
+    margin-top: 300pt;
+}
+
+.link {
+    width: 140pt;
+    border-radius: 21pt;
+    margin-top: 10pt;
+    margin-left: 10pt;
+}
+
 </style>
 
 </head>
@@ -121,6 +143,20 @@ body {
             </a>
         </div>
     </form>    
+
+    <div class="title" style="margin-left: 50pt;">
+        <p style="font-size: 18pt">ソーシャルメディア</p>
+        <div class="websites" style="position: absolute; width: 310pt;">
+            <span><a href="https://www.reddit.com"><img class="link" src="resources/reddit.jpg"></a><a href="https://www.facebook.com"><img class="link" src="resources/facebook.jpg"></a></span>
+        </div>
+    </div>
+
+    <div class="title" style="margin-left: 400pt;">
+        <p style="font-size: 18pt">仕事</p>
+        <div class="websites" style="position: absolute; width: 310pt;">
+            <span><a href="https://www.fenix.tecnico.ulisboa.pt"><img class="link" src="resources/tecnico.jpg"></a><a href="https://www.duolingo.com"><img class="link" src="resources/duolingo.png"></a></span>
+        </div>
+    </div>
 
 </body>
 
