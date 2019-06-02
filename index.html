@@ -105,7 +105,7 @@ body {
 .title {
     position: absolute;
     color: white;  
-    margin-top: 300pt;
+    margin-top: 260pt;
 }
 
 .link {
@@ -115,6 +115,9 @@ body {
     margin-left: 10pt;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
 </style>
 
 </head>
@@ -135,7 +138,7 @@ body {
         <p style="font-size: 18pt"><span id="weatherCondition" style="margin-top: 170pt; margin-left: -30pt"></span><img id="weatherImg" style="margin-top: 160pt;  margin-left: 26pt; width: 50pt;"></p>
     </div>
 
-    <form action="https://www.google.com/search" id="searchform" class="searchform" method="get" name="searchform" target="_blank">
+    <form action="https://www.google.com/search" id="searchform" class="searchform" method="get" name="searchform">
         <div class="search-box" style="margin-top: -100pt;">
             <input type="text" name="q" class="search-txt" onkeydown="javascript:handleQuery(event,this.value);return event.key != 'Enter';" placeholder="Type to search" autocomplete="off"/>
             <a class="search-btn" onclick="searchPress(event)">
@@ -147,16 +150,31 @@ body {
     <div class="title" style="margin-left: 50pt;">
         <p style="font-size: 18pt">ソーシャルメディア</p>
         <div class="websites" style="position: absolute; width: 310pt;">
-            <span><a href="https://www.reddit.com"><img class="link" src="resources/reddit.jpg"></a><a href="https://www.facebook.com"><img class="link" src="resources/facebook.jpg"></a></span>
+            <span><a href="https://www.reddit.com"><img class="link" src="resources/reddit.jpg"></a>
+                <a href="https://www.facebook.com"><img class="link" src="resources/facebook.jpg"></a></span>
         </div>
     </div>
 
     <div class="title" style="margin-left: 400pt;">
         <p style="font-size: 18pt">仕事</p>
-        <div class="websites" style="position: absolute; width: 310pt;">
-            <span><a href="https://www.fenix.tecnico.ulisboa.pt"><img class="link" src="resources/tecnico.jpg"></a><a href="https://www.duolingo.com"><img class="link" src="resources/duolingo.png"></a></span>
+        <div class="websites" style="position: absolute; width: 780pt;">
+            <span><a href="https://fenix.tecnico.ulisboa.pt"><img class="link" src="resources/tecnico.jpg"></a>
+                <a href="https://www.duolingo.com"><img class="link" src="resources/duolingo.png"></a>
+                <a href="https://www.bluehost.com"><img class="link" src="resources/bluehost.png"></a>
+                <a href="https://www.github.com"><img class="link" src="resources/github.png"></a>
+                <a href="https://www.gmail.com/"><img class="link" src="resources/gmail.png"></a></span>
         </div>
     </div>
+
+    <div class="title" style="margin-left: 50pt; margin-top: 500pt; padding-bottom: 200pt;">
+        <p style="font-size: 18pt">娯楽</p>
+        <div class="websites" style="position: absolute; width: 460pt;">
+            <span><a href="https://www.netflix.com"><img class="link" src="resources/netflix.png"></a>
+                <a href="https://www.superanimes.site"><img class="link" src="resources/anime.jpg"></a>
+                <a href="https://www.youtube.com"><img class="link" src="resources/youtube.png"></a></span>
+        </div>
+    </div>
+
 
 </body>
 

@@ -25,6 +25,12 @@ function handleQuery(a, b) {
             site += document.getElementsByClassName("search-txt")[0].value;
             window.open(site);
         }
+        else if (b[0] == "!" && b[1] == "m") {
+            document.getElementsByClassName("search-txt")[0].value = b.substr(3);
+            var site = "http://rarbg.to/torrents.php?search=";
+            site += document.getElementsByClassName("search-txt")[0].value;
+            window.open(site);
+        }
         else document.forms["searchform"].submit(); 
     }
     noEnter = 0;
