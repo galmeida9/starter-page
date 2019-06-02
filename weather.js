@@ -9,7 +9,7 @@ function checkCookies(){
                 latitude:getCookie("lat")
             }
         };
-        Weather(position);
+        weather(position);
     } else {
         getLocation();
     }
