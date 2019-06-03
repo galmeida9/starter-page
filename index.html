@@ -125,6 +125,19 @@ body {
 ::-webkit-scrollbar { 
     display: none; 
 }
+
+.newsImage {
+    width: 110pt;
+    border-radius: 21pt;
+}
+
+.newsTitle {
+    margin-top: -45pt;
+    margin-left: 140pt;
+    font-size: 17pt;
+    color: white;
+
+}
 </style>
 
 </head>
@@ -157,28 +170,56 @@ body {
     <div class="title" style="margin-left: 50pt;">
         <p style="font-size: 18pt">ソーシャルメディア</p>
         <div class="websites" style="position: absolute; width: 255pt;">
-            <span><a href="https://www.reddit.com" draggable="false"><img class="link" src="resources/reddit.jpg" draggable="false"></a>
-                <a href="https://www.facebook.com" draggable="false"><img class="link" src="resources/facebook.jpg" draggable="false"></a></span>
+            <span>
+                <a href="https://www.reddit.com" draggable="false"><img class="link" src="resources/reddit.jpg" draggable="false"></a>
+                <a href="https://www.facebook.com" draggable="false"><img class="link" src="resources/facebook.jpg" draggable="false"></a>
+            </span>
         </div>
     </div>
 
     <div class="title" style="margin-left: 360pt;">
         <p style="font-size: 18pt">仕事</p>
         <div class="websites" style="position: absolute; width: 625pt;">
-            <span><a href="https://fenix.tecnico.ulisboa.pt" draggable="false"><img class="link" src="resources/tecnico.jpg" draggable="false"></a>
+            <span>
+                <a href="https://fenix.tecnico.ulisboa.pt" draggable="false"><img class="link" src="resources/tecnico.jpg" draggable="false"></a>
                 <a href="https://www.duolingo.com" draggable="false"><img class="link" src="resources/duolingo.png" draggable="false"></a>
                 <a href="https://www.bluehost.com" draggable="false"><img class="link" src="resources/bluehost.png" draggable="false"></a>
                 <a href="https://www.github.com" draggable="false"><img class="link" src="resources/github.png" draggable="false"></a>
-                <a href="https://www.gmail.com/" draggable="false"><img class="link" src="resources/gmail.png" draggable="false"></a></span>
+                <a href="https://www.gmail.com/" draggable="false"><img class="link" src="resources/gmail.png" draggable="false"></a>
+            </span>
         </div>
     </div>
 
     <div class="title" style="margin-left: 50pt; margin-top: 460pt;">
         <p style="font-size: 18pt">娯楽</p>
         <div class="websites" style="position: absolute; width: 380pt;">
-            <span><a href="https://www.netflix.com" draggable="false"><img class="link" src="resources/netflix.png" draggable="false"></a>
+            <span>
+                <a href="https://www.netflix.com" draggable="false"><img class="link" src="resources/netflix.png" draggable="false"></a>
                 <a href="https://www.superanimes.site" draggable="false"><img class="link" src="resources/anime.jpg" draggable="false"></a>
-                <a href="https://www.youtube.com" draggable="false"><img class="link" src="resources/youtube.png" draggable="false"></a></span>
+                <a href="https://www.youtube.com" draggable="false"><img class="link" src="resources/youtube.png" draggable="false"></a>
+            </span>
+        </div>
+    </div>
+
+    <div class="title" style="margin-left: 50pt; margin-top: 660pt;">
+        <p style="font-size: 18pt">ニュース</p>
+        <div class="websites" style="position: absolute; width: 1290pt; height: 290pt;" id="news">
+            <span>
+                <a href="" id="news0" draggable="false" style="text-decoration: none;"><img class="newsImage" id="news0Img" src="" draggable="false" style="margin-top: 10pt; margin-left: 10pt;"><p id="news0Title" class="newsTitle"></p></a>
+                <a href="" id="news1" draggable="false" style="text-decoration: none;"><img class="newsImage" id="news1Img" src="" draggable="false" style="margin-top: 20pt; margin-left: 10pt;"><p id="news1Title" class="newsTitle"></p></a>
+                <a href="" id="news2" draggable="false" style="text-decoration: none;"><img class="newsImage" id="news2Img" src="" draggable="false" style="margin-top: 25pt; margin-left: 10pt;"><p id="news2Title" class="newsTitle"></p></a>
+                <p id="showMore" onclick="showMore()" style="cursor: pointer; font-size: 17pt; margin-top: 25pt; margin-left: 10pt;">もっと見せる</p>
+                <div id="showMoreNews" style="display: none">
+                    <a href="" id="news3" draggable="false" style="text-decoration: none;"><img class="newsImage" id="news3Img" src="" draggable="false" style="margin-top: 25pt; margin-left: 10pt;"><p id="news3Title" class="newsTitle"></p></a>
+                    <a href="" id="news4" draggable="false" style="text-decoration: none;"><img class="newsImage" id="news4Img" src="" draggable="false" style="margin-top: 25pt; margin-left: 10pt;"><p id="news4Title" class="newsTitle"></p></a>
+                    <a href="" id="news5" draggable="false" style="text-decoration: none;"><img class="newsImage" id="news5Img" src="" draggable="false" style="margin-top: 25pt; margin-left: 10pt;"><p id="news5Title" class="newsTitle"></p></a>
+                    <a href="" id="news6" draggable="false" style="text-decoration: none;"><img class="newsImage" id="news6Img" src="" draggable="false" style="margin-top: 25pt; margin-left: 10pt;"><p id="news6Title" class="newsTitle"></p></a>
+                    <a href="" id="news7" draggable="false" style="text-decoration: none;"><img class="newsImage" id="news7Img" src="" draggable="false" style="margin-top: 25pt; margin-left: 10pt;"><p id="news7Title" class="newsTitle"></p></a>
+                    <a href="" id="news8" draggable="false" style="text-decoration: none;"><img class="newsImage" id="news8Img" src="" draggable="false" style="margin-top: 25pt; margin-left: 10pt;"><p id="news8Title" class="newsTitle"></p></a>
+                    <a href="" id="news9" draggable="false" style="text-decoration: none;"><img class="newsImage" id="news9Img" src="" draggable="false" style="margin-top: 25pt; margin-left: 10pt;"><p id="news9Title" class="newsTitle"></p></a>
+                    <p id="showMore" onclick="showLess()" style="cursor: pointer; font-size: 17pt; margin-top: 25pt; margin-left: 10pt;">少なく表示</p>
+                </span>
+            </span>
         </div>
     </div>
 
@@ -188,6 +229,7 @@ body {
 <script src="weather.js"></script>
 <script src="clock.js"></script>
 <script src="search.js"></script>
+<script src="news.js"></script>
 <script>
 document.body.draggable = false;
 document.addEventListener('contextmenu', event => event.preventDefault());

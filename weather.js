@@ -10,9 +10,19 @@ function checkCookies(){
             }
         };
         weather(position);
-    } else {
-        getLocation();
+    } 
+    lat = localStorage.getItem("lat");
+    console.log(lat);
+    if (lat != "null") {
+      var position = {
+          coords:{
+              longitude: localStorage.getItem("lon"),
+              latitude: lat
+          }
+      };
+      weather(position);
     }
+    else getLocation();
 }
 
 function getCookie(cookie) {
@@ -47,6 +57,8 @@ function weather(position){
 
     document.cookie = "lat=" + position.coords.latitude + ";expires=365";
     document.cookie = "lon=" + position.coords.longitude + ";expires=365";
+    localStorage.setItem("lat", position.coords.latitude);
+    localStorage.setItem("lon", position.coords.longitude);
 
     request.onload = function () {
         var data = JSON.parse(this.response);
