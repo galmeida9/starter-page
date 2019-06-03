@@ -39,6 +39,12 @@ function handleQuery(a, b) {
             site += document.getElementsByClassName("search-txt")[0].value;
             window.open(site,"_self");
         }
+        else if (b[0] == "!" && b[1] == "i") {
+            document.getElementsByClassName("search-txt")[0].value = b.substr(3);
+            var site = "https://www.imdb.com/find?ref_=nv_sr_fn&q=";
+            site += document.getElementsByClassName("search-txt")[0].value;
+            window.open(site,"_self");
+        }
         else document.forms["searchform"].submit(); 
     }
     noEnter = 0;
