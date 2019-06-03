@@ -13,6 +13,13 @@ body {
     font-family: 'Sawarabi Gothic', sans-serif;
     width: 100%;
     height: 100%;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    -webkit-user-drag: none;
 }
 
 #videoBackground {
@@ -150,28 +157,28 @@ body {
     <div class="title" style="margin-left: 50pt;">
         <p style="font-size: 18pt">ソーシャルメディア</p>
         <div class="websites" style="position: absolute; width: 255pt;">
-            <span><a href="https://www.reddit.com"><img class="link" src="resources/reddit.jpg"></a>
-                <a href="https://www.facebook.com"><img class="link" src="resources/facebook.jpg"></a></span>
+            <span><a href="https://www.reddit.com" draggable="false"><img class="link" src="resources/reddit.jpg" draggable="false"></a>
+                <a href="https://www.facebook.com" draggable="false"><img class="link" src="resources/facebook.jpg" draggable="false"></a></span>
         </div>
     </div>
 
     <div class="title" style="margin-left: 360pt;">
         <p style="font-size: 18pt">仕事</p>
         <div class="websites" style="position: absolute; width: 625pt;">
-            <span><a href="https://fenix.tecnico.ulisboa.pt"><img class="link" src="resources/tecnico.jpg"></a>
-                <a href="https://www.duolingo.com"><img class="link" src="resources/duolingo.png"></a>
-                <a href="https://www.bluehost.com"><img class="link" src="resources/bluehost.png"></a>
-                <a href="https://www.github.com"><img class="link" src="resources/github.png"></a>
-                <a href="https://www.gmail.com/"><img class="link" src="resources/gmail.png"></a></span>
+            <span><a href="https://fenix.tecnico.ulisboa.pt" draggable="false"><img class="link" src="resources/tecnico.jpg" draggable="false"></a>
+                <a href="https://www.duolingo.com" draggable="false"><img class="link" src="resources/duolingo.png" draggable="false"></a>
+                <a href="https://www.bluehost.com" draggable="false"><img class="link" src="resources/bluehost.png" draggable="false"></a>
+                <a href="https://www.github.com" draggable="false"><img class="link" src="resources/github.png" draggable="false"></a>
+                <a href="https://www.gmail.com/" draggable="false"><img class="link" src="resources/gmail.png" draggable="false"></a></span>
         </div>
     </div>
 
     <div class="title" style="margin-left: 50pt; margin-top: 460pt;">
         <p style="font-size: 18pt">娯楽</p>
         <div class="websites" style="position: absolute; width: 380pt;">
-            <span><a href="https://www.netflix.com"><img class="link" src="resources/netflix.png"></a>
-                <a href="https://www.superanimes.site"><img class="link" src="resources/anime.jpg"></a>
-                <a href="https://www.youtube.com"><img class="link" src="resources/youtube.png"></a></span>
+            <span><a href="https://www.netflix.com" draggable="false"><img class="link" src="resources/netflix.png" draggable="false"></a>
+                <a href="https://www.superanimes.site" draggable="false"><img class="link" src="resources/anime.jpg" draggable="false"></a>
+                <a href="https://www.youtube.com" draggable="false"><img class="link" src="resources/youtube.png" draggable="false"></a></span>
         </div>
     </div>
 
@@ -181,5 +188,9 @@ body {
 <script src="weather.js"></script>
 <script src="clock.js"></script>
 <script src="search.js"></script>
+<script>
+document.body.draggable = false;
+document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
 
 </html>
