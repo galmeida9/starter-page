@@ -67,7 +67,7 @@
         <div class="websites" style="position: absolute; width: 500pt;">
             <span>
                 <a href="https://www.netflix.com" draggable="false"><img class="link" src="resources/netflix.png" draggable="false"></a>
-                <a href="https://www.superanimes.site" draggable="false"><img class="link" src="resources/anime.jpg" draggable="false"></a>
+                <img class="link" src="resources/anime.jpg" draggable="false" onclick="openAnime()" style="cursor: pointer;" id="anime">
                 <a href="https://www.youtube.com" draggable="false"><img class="link" src="resources/youtube.png" draggable="false"></a>
                 <a href="https://www.tvtime.com/pt_PT" draggable="false"><img class="link" src="resources/tvtime.png" draggable="false"></a>
             </span>
@@ -109,6 +109,19 @@
         </div>
     </div>
 
+    <div id="animepopup" class="popup">
+        <div class="popupcontent darkmodeText darkmodeBackground">
+            <p style="font-size: 20pt">
+                <span><a href="https://www.superanimes.site" style="cursor: pointer;"><img class="link" src="resources/superanimes.png" draggable="false" style="margin-top: -25pt"></a></span>
+                <span><a href="https://www.superanimes.site/anime/fairy-tail" style="cursor: pointer;"><img class="link" src="resources/anime.jpg" draggable="false" style="margin-top: -25pt"></a></span>
+                <span><a href="https://www.superanimes.site/anime/shingeki-no-kyojin" style="cursor: pointer;"><img class="link" src="resources/shingeki.jpg" draggable="false" style="margin-top: -25pt"></a></span>
+                <span><a href="https://www.superanimes.site/anime/yakusoku-no-neverland" style="cursor: pointer;"><img class="link" src="resources/promisedneverland.jpg" draggable="false" style="margin-top: -25pt"></a></span>
+                <span><a href="https://www.superanimes.site/anime/one-punch-man" style="cursor: pointer;"><img class="link" src="resources/onepunchman.jpg" draggable="false" style="margin-top: -25pt"></a></span>
+                <span><a href="https://www.superanimes.site/anime/boruto-naruto-next-generations" style="cursor: pointer;"><img class="link" src="resources/boruto.png" draggable="false" style="margin-top: -25pt"></a></span>
+            </p>
+        </div>
+    </div>
+
 </body>
 
 <script src="js/weather.js"></script>
@@ -116,6 +129,7 @@
 <script src="js/search.js"></script>
 <script src="js/news.js"></script>
 <script src="js/fenix.js"></script>
+<script src="js/anime.js"></script>
 <script>
 document.body.draggable = false;
 document.addEventListener('contextmenu', event => event.preventDefault());
