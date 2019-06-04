@@ -40,7 +40,7 @@ body {
     border-color: rgb(255,255,255, 0.5);
     border-style: solid;
     border-radius: 21pt;
-    height: 130pt;
+    height: 90pt;
     background-color: rgb(211,211,211, 0.5);
 }
 
@@ -51,9 +51,9 @@ body {
 }
 
 .link {
-    width: 110pt;
+    width: 80pt;
     border-radius: 21pt;
-    margin-top: 10pt;
+    margin-top: 6pt;
     margin-left: 10pt;
 }
 
