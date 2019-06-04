@@ -26,7 +26,7 @@ function displayReddit() {
         document.getElementsByClassName("newsImage")[i].style.width = "63pt";
         document.getElementsByClassName("newsTitle")[i].style.marginLeft = "92pt";
         document.getElementById("news" + i).href = "https://www.reddit.com" + redditData["data"]["children"][i]["data"]["permalink"];
-        document.getElementById("news" + i + "Img").src = redditData["data"]["children"][i]["data"]["thumbnail"];
+        document.getElementById("news" + i + "Img").src = redditData["data"]["children"][i]["data"]["thumbnail"].replace("http:", "https:");
         document.getElementById("news" + i + "Title").innerHTML = redditData["data"]["children"][i]["data"]["title"];
     }
 }

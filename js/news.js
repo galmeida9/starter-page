@@ -41,7 +41,7 @@ function displayNews() {
         document.getElementsByClassName("newsImage")[i].style.width = "110pt";
         document.getElementsByClassName("newsTitle")[i].style.marginLeft = "140pt";
         document.getElementById("news" + i).href = newsData["articles"][i]["url"];
-        document.getElementById("news" + i + "Img").src = newsData["articles"][i]["urlToImage"];
+        document.getElementById("news" + i + "Img").src = newsData["articles"][i]["urlToImage"].replace("http:", "https:");
         document.getElementById("news" + i + "Title").innerHTML = newsData["articles"][i]["title"];
     }
 }
