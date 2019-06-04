@@ -32,8 +32,13 @@
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
     -webkit-user-drag: none;
-    margin: 0 auto;
-    margin-top: 327pt;
+    margin: auto;
+    top: 0;
+    position: fixed;
+    left: 0;
+    display: inline-block;
+    right: 0;
+    bottom: 0;
 }
 
 .popupcontent p {
