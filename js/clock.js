@@ -32,5 +32,5 @@ function displayDate() {
     if (day < 10) day = "0" + day;
     if (month < 10) month = "0" + month;
 
-    document.getElementById("date").innerHTML = n + " " + day + "/" + month;
+    document.getElementById("date").innerHTML = n + " " + day + "日" + month + "月";
 }

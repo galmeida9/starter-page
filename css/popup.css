@@ -1,0 +1,59 @@
+.popup {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 600ms, visibility 600ms;
+    position: absolute; 
+    padding-top: 0.5cm;
+    padding-right: 0.2cm; 
+    padding-bottom: 0cm;
+    border-radius: 0.45cm;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 150%; 
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.popupcontent {
+    background-color: rgb(187, 187, 187, 0.95);
+    padding: 15pt;
+    border-width: 5pt;
+    border-color: rgba(29, 29, 29, 0.5);
+    border-style: solid;
+    width: 54%;
+    height: 100pt;
+    margin-left: 0.2cm;
+    border-radius: 21pt;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    -webkit-user-drag: none;
+    margin: 0 auto;
+    margin-top: 327pt;
+}
+
+.popupcontent p {
+    font-size: 7pt;
+}
+
+.popupcontent a{
+    text-decoration: none;
+    color: black;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 11.25pt;
+    font-weight: bold;
+    margin-right: -0.35cm;
+    margin-top: -0.45cm;
+}
+  
+.close:hover, .close:focus {
+    cursor: pointer;
+}
