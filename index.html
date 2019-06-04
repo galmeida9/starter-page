@@ -75,7 +75,7 @@
     </div>
 
     <div class="title" style="margin-left: 70pt; margin-top: 418pt;">
-        <p style="font-size: 18pt">ニュース</p>
+        <p style="font-size: 18pt"><span id="newsButton" style="color: grey; cursor: pointer;" onclick="displayNews()">ニュース</span><span style="margin-left: 20pt; cursor: pointer;" id="redditButton" onclick="displayReddit()">Reddit</span></p>
         <div class="websites" style="position: absolute; width: 1250pt; height: 290pt;" id="news">
             <span>
                 <a href="" id="news0" draggable="false" style="text-decoration: none;"><img class="newsImage" id="news0Img" src="" draggable="false" style="margin-top: 10pt; margin-left: 10pt;"><p id="news0Title" class="newsTitle"></p></a>
@@ -121,6 +121,7 @@
             </p>
         </div>
     </div>
+    
 
 </body>
 
@@ -129,7 +130,7 @@
 <script src="js/search.js"></script>
 <script src="js/news.js"></script>
 <script src="js/fenix.js"></script>
-<script src="js/anime.js"></script>
+<script src="js/reddit.js"></script>
 <script>
 document.body.draggable = false;
 document.addEventListener('contextmenu', event => event.preventDefault());

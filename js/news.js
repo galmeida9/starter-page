@@ -1,3 +1,5 @@
+var newsData;
+
 getNews();
 
 function getNews() {
@@ -11,12 +13,8 @@ function getNews() {
         var data = JSON.parse(this.response);
         console.log(data);
         if (request.status >= 200 && request.status < 400) {
-            var i;
-            for (i = 0; i < 10; i++) {
-                document.getElementById("news" + i).href = data["articles"][i]["url"];
-                document.getElementById("news" + i + "Img").src = data["articles"][i]["urlToImage"];
-                document.getElementById("news" + i + "Title").innerHTML = data["articles"][i]["title"];
-            }
+            newsData = data;
+            displayNews();
         } 
         else {console.log('error')}
     }
@@ -33,4 +31,17 @@ function showLess() {
     document.getElementById("showMore").style.display = "block";
     document.getElementById("news").style.height = "290pt";
     document.getElementById("showMoreNews").style.display = "none";
+}
+
+function displayNews() {
+    var i;
+    document.getElementById("redditButton").style.color = "white";
+    document.getElementById("newsButton").style.color = "grey";
+    for (i = 0; i < 10; i++) {
+        document.getElementsByClassName("newsImage")[i].style.width = "110pt";
+        document.getElementsByClassName("newsTitle")[i].style.marginLeft = "140pt";
+        document.getElementById("news" + i).href = newsData["articles"][i]["url"];
+        document.getElementById("news" + i + "Img").src = newsData["articles"][i]["urlToImage"];
+        document.getElementById("news" + i + "Title").innerHTML = newsData["articles"][i]["title"];
+    }
 }
