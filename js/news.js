@@ -23,14 +23,16 @@ function getNews() {
 
 function showMore() {
     document.getElementById("showMore").style.display = "none";
-    document.getElementById("news").style.height = "920pt";
+    document.getElementById("news").style.height = "865pt";
     document.getElementById("showMoreNews").style.display = "block";
+    document.getElementById("newsWrapper").style.paddingBottom = "1000pt";
 }
 
 function showLess() {
     document.getElementById("showMore").style.display = "block";
     document.getElementById("news").style.height = "290pt";
     document.getElementById("showMoreNews").style.display = "none";
+    document.getElementById("newsWrapper").style.paddingBottom = "0pt";
 }
 
 function displayNews() {
@@ -38,8 +40,6 @@ function displayNews() {
     document.getElementById("redditButton").style.color = "white";
     document.getElementById("newsButton").style.color = "grey";
     for (i = 0; i < 10; i++) {
-        document.getElementsByClassName("newsImage")[i].style.width = "110pt";
-        document.getElementsByClassName("newsTitle")[i].style.marginLeft = "140pt";
         document.getElementById("news" + i).href = newsData["articles"][i]["url"];
         document.getElementById("news" + i + "Img").src = newsData["articles"][i]["urlToImage"].replace("http:", "https:");
         document.getElementById("news" + i + "Title").innerHTML = newsData["articles"][i]["title"];
