@@ -122,6 +122,18 @@
             </p>
         </div>
     </div>
+
+    <div class="title" style="margin-left: 70pt; margin-top: 780pt;" id="footballWrapper">
+        <p style="font-size: 18pt">サッカー</p>
+        <div class="websites" style="position: absolute; width: 1250pt; height: 290pt;" id="football">
+            <span>
+                <p><span id="f0Pos" class="newsTitle"></span><img class="newsImage" id="f0Img" src="" draggable="false" style="margin-top: 10pt; margin-left: 10pt;"><span id="f0Title" class="newsTitle"></span><span id="f0Score" class="newsTitle"></span></p>
+                <p><span id="f1Pos" class="newsTitle"></span><img class="newsImage" id="f1Img" src="" draggable="false" style="margin-top: 20pt; margin-left: 10pt;"><span id="f1Title" class="newsTitle"></span><span id="f1Score" class="newsTitle"></span></p>
+                <p><span id="f2Pos" class="newsTitle"></span><img class="newsImage" id="f2Img" src="" draggable="false" style="margin-top: 25pt; margin-left: 10pt;"><span id="f2Title" class="newsTitle"></span><span id="f2Score" class="newsTitle"></span></p>
+                <p id="showMore" onclick="showMore()" style="cursor: pointer; font-size: 17pt; margin-top: 25pt; margin-left: 10pt;">もっと見せる</p>
+            </span>
+        </div>
+    </div>
     
 
 </body>
@@ -130,11 +142,12 @@
 <script src="js/clock.js"></script>
 <script src="js/search.js"></script>
 <script src="js/news.js"></script>
-<script src="js/fenix.js"></script>
+<script src="js/popup.js"></script>
 <script src="js/reddit.js"></script>
+<script src="js/football.js"></script>
 <script>
 document.body.draggable = false;
-//document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault());
 </script>
 
 </html>
