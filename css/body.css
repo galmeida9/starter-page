@@ -11,6 +11,12 @@ body {
     -webkit-user-drag: none;
 }
 
+@media only screen and (max-width: 1536px) {
+    body {
+        zoom: 80%;
+    }
+}
+
 #videoBackground {
     min-height: 100%;
     min-width: 100%;
@@ -72,4 +78,47 @@ body {
     font-size: 17pt;
     color: white;
 
+}
+
+.fPos {
+    margin-left: 0pt;
+    display: block;
+    margin-top: 30pt;
+}
+
+.fTitle {
+    margin-left: 0pt;
+    display: block;
+    width: 230pt;
+    margin-top: 30pt;
+}
+
+.fScore {
+    margin-left: -1380pt;
+    display: block;
+    margin-top: 30pt;
+}
+
+.fGames {
+    margin-left: -1200pt;
+    display: block;
+    margin-top: 30pt;
+}
+
+.fWon {
+    display: block;
+    margin-left: -1030pt;
+    margin-top: 30pt;
+}
+
+.fDraw {
+    display: block;
+    margin-left: -850pt;
+    margin-top: 30pt;
+}
+
+.fLost {
+    display: block;
+    margin-left: -670pt;
+    margin-top: 30pt;
 }

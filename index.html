@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Start Page</title>
 <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/body.css">
@@ -75,7 +76,11 @@
     </div>
 
     <div class="title" style="margin-left: 70pt; margin-top: 418pt;" id="newsWrapper">
-        <p style="font-size: 18pt"><span id="newsButton" style="color: grey; cursor: pointer;" onclick="displayNews()">ニュース</span><span style="margin-left: 20pt; cursor: pointer;" id="redditButton" onclick="displayReddit()">Reddit</span></p>
+        <p style="font-size: 18pt">
+            <span id="newsButton" style="color: grey; cursor: pointer;" onclick="displayNews()">ニュース</span>
+            <span style="margin-left: 20pt; cursor: pointer;" id="redditButton" onclick="displayReddit()">Reddit</span>
+            <span style="margin-left: 20pt; cursor: pointer;" id="footballButton" onclick="displayFootball()">サッカー</span>
+        </p>
         <div class="websites" style="position: absolute; width: 1250pt; height: 290pt;" id="news">
             <span>
                 <a href="" id="news0" draggable="false" style="text-decoration: none;"><img class="newsImage" id="news0Img" src="" draggable="false" style="margin-top: 10pt; margin-left: 10pt;"><p id="news0Title" class="newsTitle"></p></a>
@@ -93,6 +98,50 @@
                     <p id="showMore" onclick="showLess()" style="cursor: pointer; font-size: 17pt; margin-top: 25pt; margin-left: 10pt;">少なく表示</p>
                 </div>
             </span>
+        </div>
+    </div>
+
+    <div class="title" style="margin-left: 70pt; margin-top: 481pt;" id="footballWrapper" style="display: none">
+        <div class="websites" style="position: absolute; width: 1250pt; height: 290pt;" id="football">
+            <table style="width: 100%">
+                <tr>
+                    <th><span class="newsTitle fPos">Pos</span></th>
+                    <th><span class="newsTitle fTitle">Team</span></th>
+                    <th><span class="newsTitle fScore">P</span></th>
+                    <th><span class="newsTitle fGames">G</span></th>
+                    <th><span class="newsTitle fWon">W</span></th>
+                    <th><span class="newsTitle fDraw">D</span></th>
+                    <th><span class="newsTitle fLost">L</span></th>
+                </tr>
+                <tr>
+                    <th><span id="f0Pos" class="newsTitle fPos"></span></th>
+                    <th><span id="f0Title" class="newsTitle fTitle"></span></th>
+                    <th><span id="f0Score" class="newsTitle fScore"></span></th>
+                    <th><span id="f0Games" class="newsTitle fGames"></span></th>
+                    <th><span id="f0Won" class="newsTitle fWon"></span></th>
+                    <th><span id="f0Draw" class="newsTitle fDraw"></span></th>
+                    <th><span id="f0Lost" class="newsTitle fLost"></span></th>
+                </tr>
+                <tr>
+                    <th><span id="f1Pos" class="newsTitle fPos"></span></th>
+                    <th><span id="f1Title" class="newsTitle fTitle"></span></th>
+                    <th><span id="f1Score" class="newsTitle fScore"></span></th>
+                    <th><span id="f1Games" class="newsTitle fGames"></span></th>
+                    <th><span id="f1Won" class="newsTitle fWon"></span></th>
+                    <th><span id="f1Draw" class="newsTitle fDraw"></span></th>
+                    <th><span id="f1Lost" class="newsTitle fLost"></span></th>
+                </tr>
+                <tr>
+                    <th><span id="f2Pos" class="newsTitle fPos"></span></th>
+                    <th><span id="f2Title" class="newsTitle fTitle"></span></th>
+                    <th><span id="f2Score" class="newsTitle fScore"></span></th>
+                    <th><span id="f2Games" class="newsTitle fGames"></span></th>
+                    <th><span id="f2Won" class="newsTitle fWon"></span></th>
+                    <th><span id="f2Draw" class="newsTitle fDraw"></span></th>
+                    <th><span id="f2Lost" class="newsTitle fLost"></span></th>
+                </tr>
+            </table>
+            <p id="showMore" onclick="showMore()" style="cursor: pointer; font-size: 17pt; margin-top: 25pt; margin-left: 60pt;">もっと見せる</p>
         </div>
     </div>
 
@@ -122,18 +171,6 @@
             </p>
         </div>
     </div>
-
-    <div class="title" style="margin-left: 70pt; margin-top: 780pt;" id="footballWrapper">
-        <p style="font-size: 18pt">サッカー</p>
-        <div class="websites" style="position: absolute; width: 1250pt; height: 290pt;" id="football">
-            <span>
-                <p><span id="f0Pos" class="newsTitle"></span><img class="newsImage" id="f0Img" src="" draggable="false" style="margin-top: 10pt; margin-left: 10pt;"><span id="f0Title" class="newsTitle"></span><span id="f0Score" class="newsTitle"></span></p>
-                <p><span id="f1Pos" class="newsTitle"></span><img class="newsImage" id="f1Img" src="" draggable="false" style="margin-top: 20pt; margin-left: 10pt;"><span id="f1Title" class="newsTitle"></span><span id="f1Score" class="newsTitle"></span></p>
-                <p><span id="f2Pos" class="newsTitle"></span><img class="newsImage" id="f2Img" src="" draggable="false" style="margin-top: 25pt; margin-left: 10pt;"><span id="f2Title" class="newsTitle"></span><span id="f2Score" class="newsTitle"></span></p>
-                <p id="showMore" onclick="showMore()" style="cursor: pointer; font-size: 17pt; margin-top: 25pt; margin-left: 10pt;">もっと見せる</p>
-            </span>
-        </div>
-    </div>
     
 
 </body>
@@ -148,6 +185,8 @@
 <script>
 document.body.draggable = false;
 document.addEventListener('contextmenu', event => event.preventDefault());
+console.log(window.screen.availHeight, window.screen.availWidth);
+var selected = 0 /* {0: news, 1: reddit; 2: football} */
 </script>
 
 </html>

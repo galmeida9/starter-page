@@ -21,7 +21,10 @@ function getReddit() {
 function displayReddit() {
     var i;
     document.getElementById("redditButton").style.color = "grey";
+    document.getElementById("footballButton").style.color = "white";
     document.getElementById("newsButton").style.color = "white";
+    document.getElementById("footballWrapper").style.display = "none";
+    document.getElementById("news").style.display = "block";
     for (i = 0; i < 10; i++) {
         document.getElementById("news" + i).href = "https://www.reddit.com" + redditData["data"]["children"][i]["data"]["permalink"];
         if (redditData["data"]["children"][i]["data"]["thumbnail"] != "self") document.getElementById("news" + i + "Img").src = redditData["data"]["children"][i]["data"]["thumbnail"].replace("http:", "https:");

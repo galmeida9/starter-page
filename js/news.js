@@ -38,7 +38,10 @@ function showLess() {
 function displayNews() {
     var i;
     document.getElementById("redditButton").style.color = "white";
+    document.getElementById("footballButton").style.color = "white";
     document.getElementById("newsButton").style.color = "grey";
+    document.getElementById("footballWrapper").style.display = "none";
+    document.getElementById("news").style.display = "block";
     for (i = 0; i < 10; i++) {
         document.getElementById("news" + i).href = newsData["articles"][i]["url"];
         document.getElementById("news" + i + "Img").src = newsData["articles"][i]["urlToImage"].replace("http:", "https:");
