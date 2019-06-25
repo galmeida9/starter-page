@@ -33,7 +33,7 @@
 
     <form action="https://www.google.com/search" id="searchform" class="searchform" method="get" name="searchform">
         <div class="search-box" style="margin-top: -100pt;">
-            <input type="text" name="q" class="search-txt" onkeydown="javascript:handleQuery(event,this.value);return event.key != 'Enter';" placeholder="Type to search" autocomplete="off"/>
+            <input type="text" name="q" class="search-txt" onkeydown="javascript:handleQuery(event,this.value);return event.key != 'Enter';" placeholder="Type to search" autocomplete="off" id="textbox"/>
             <a class="search-btn" onclick="searchPress(event)">
             <i class="fas fa-search"></i>
             </a>
@@ -185,8 +185,8 @@
 <script>
 document.body.draggable = false;
 document.addEventListener('contextmenu', event => event.preventDefault());
-console.log(window.screen.availHeight, window.screen.availWidth);
 var selected = 0 /* {0: news, 1: reddit; 2: football} */
+
 </script>
 
 </html>
